@@ -1,0 +1,11 @@
+{
+  "expires_in": 1200008,
+  "request_uri": "urn:op.iamid.io:6nLpmuKd-VWx83Hp1i9lKPxTowPLhh58Wd_PNKf4zVt",
+  "errors": [
+    {
+      "group": "id_token.assertion_claims",
+      "key": "name",
+      "description": "assertions not supported on this claim"
+    }
+  ]
+}

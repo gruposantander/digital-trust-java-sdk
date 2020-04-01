@@ -1,0 +1,63 @@
+{
+  "state": "state-123",
+  "redirect_uri":"https://rp-example.com/callback",
+  "nonce": "nonce-11111111-1111-1111-1111-111111111111",
+  "claims": {
+    "id_token": {
+      "assertion_claims": {
+        "given_name": {
+          "assertion": {
+            "$eq": "John"
+          },
+          "purpose": "This is why RP is verifying your name"
+        },
+        "email": {
+          "assertion": {
+            "$eq": "jane.doe@santander.co.uk"
+          },
+          "purpose": "This is why RP is verifying your email"
+        },
+        "birthdate": {
+          "assertion": {
+            "$eq": "1970-01-01"
+          },
+          "purpose": "This is why RP is verifying your DOB"
+        },
+        "age": {
+          "assertion": {
+            "$gt": 18
+          },
+          "purpose": "age purpose"
+        },
+        "address": {
+          "purpose": "address assertion purpose",
+          "essential": true,
+          "assertion": {
+            "postal_code": {
+              "$eq": "MK1 1AA"
+            },
+            "country": {
+              "$eq": "United Kingdom"
+            }
+          }
+        },
+        "total_balance": {
+          "purpose": "total balance assertion purpose",
+          "essential": true,
+          "assertion": {
+            "amount": {
+              "$gt": 100.01
+            },
+            "currency": {
+              "$eq": "GBP"
+            }
+          }
+        }
+      },
+      "given_name": {
+        "purpose": "Given name purpose",
+        "essential": true
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "scope": "openid",
+  "claims": {
+    "id_token": {
+      "assertion_claims": {
+        "total_balance": {
+          "assertion": {
+            "amount": {
+              "$gt": 10
+            }
+          }
+        },
+        "birthdate": {
+          "purpose": "This is why RP is verifying your DOB",
+          "assertion": {
+            "$eq": "1970-01-01"
+          }
+        },
+        "address": {
+          "purpose": "This is why RP is verifying your address",
+          "assertion": {
+            "country": {
+              "$eq": "UK"
+            },
+            "postal_code": {
+              "$eq": "MK11AA"
+            }
+          }
+        },
+        "given_name": {
+          "purpose": "This is why RP is verifying your name",
+          "assertion": {
+            "$eq": "John"
+          }
+        },
+        "family_name": {
+          "purpose": "This is why RP is verifying your surname",
+          "assertion": {
+            "$eq": "Doe"
+          }
+        }
+      },
+      "given_name": {
+        "essential": true
+      }
+    }
+  },
+  "response_type": "code",
+  "state": "state-123",
+  "nonce": "nonce-11111111-1111-1111-1111-111111111111",
+  "client_id": "1234"
+}

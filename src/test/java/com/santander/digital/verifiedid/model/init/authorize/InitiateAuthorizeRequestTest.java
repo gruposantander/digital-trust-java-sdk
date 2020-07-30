@@ -31,7 +31,7 @@ public class InitiateAuthorizeRequestTest {
 
         assertionClaims = new AssertionClaims();
         assertionClaims.givenName().eq("John").withPurpose("This is why RP is verifying your name");
-        assertionClaims.email().eq("jane.doe@santander.co.uk").withPurpose("This is why RP is verifying your email");
+        assertionClaims.email().eq("jane.doe@op-example.com").withPurpose("This is why RP is verifying your email");
         assertionClaims.birthdate().eq(Date.from(Instant.EPOCH)).withPurpose("This is why RP is verifying your DOB");
         assertionClaims.age().gt(18).withPurpose("age purpose");
         assertionClaims.address()

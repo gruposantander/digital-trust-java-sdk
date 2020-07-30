@@ -13,7 +13,7 @@
         },
         "email": {
           "assertion": {
-            "$eq": "jane.doe@santander.co.uk"
+            "$eq": "jane.doe@op-example.com"
           },
           "purpose": "This is why RP is verifying your email"
         },

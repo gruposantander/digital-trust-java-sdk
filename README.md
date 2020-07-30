@@ -138,9 +138,9 @@ The SDK support the same verifying claims as it does for sharing, though the dat
 There are three types of assertions in this SDK: _simple_, _comparative_ and _complex_.
  * *Simple assertions*:  they support only the ``.eq`` (equal assertion), e.g.
     ```java
-    assertionClaims.email().eq("jane.doe@santander.co.uk");
+    assertionClaims.email().eq("jane.doe@op-example.com");
     ```
-   which translates into ``Verify that the email is "jane.doe@santander.co.uk"``
+   which translates into ``Verify that the email is "jane.doe@op-example.com"``
  * *Comparative assertions*: they extend _simple_ assertions with the ``.gt``, ``.gte``, ``.lt`` and ``.lte`` operations, e.g.:
    ```java
     assertionClaims.age().gte(18);

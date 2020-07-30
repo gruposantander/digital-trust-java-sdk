@@ -21,11 +21,11 @@ public class AssertionClaimsTest {
     private final Date tomorrow = Date.from(Instant.now().plus(1, DAYS));
 
     private AssertionClaim<String> emailAssertionClaimEq
-            = new AssertionClaimSimple<String>("email").eq("davide.bianchini@santander.co.uk");
+            = new AssertionClaimSimple<String>("email").eq("jane.doe@op-example.com");
     private AssertionClaim<String> emailAssertionClaimEqWithIAL
-            = new AssertionClaimSimple<String>("email").eq("davide.bianchini@santander.co.uk").withIAL(IAL.ONE);
+            = new AssertionClaimSimple<String>("email").eq("jane.doe@op-example.com").withIAL(IAL.ONE);
     private AssertionClaim<String> emailAssertionClaimEqWithEssential
-            = new AssertionClaimSimple<String>("email").eq("davide.bianchini@santander.co.uk").withEssential(true);
+            = new AssertionClaimSimple<String>("email").eq("jane.doe@op-example.com").withEssential(true);
     private AssertionClaim<String> familyNameAssertionClaimEq
             = new AssertionClaimSimple<String>("family_name").eq("Smith");
     private AssertionClaim<String> givenNameAssertionClaimEq
@@ -83,7 +83,7 @@ public class AssertionClaimsTest {
     @Test
     public void addEmailWithEqualsShouldAddEmailClaimIfNotAlreadyPresent() {
         AssertionClaims assertionClaims = new AssertionClaims();
-        assertionClaims.email().eq("davide.bianchini@santander.co.uk");
+        assertionClaims.email().eq("jane.doe@op-example.com");
 
         assertThat("Assertion not added", assertionClaims.getClaims().size(), is(1));
         assertThat("Wrong assertion added", assertionClaims.getClaims().get(0), is(emailAssertionClaimEq));
@@ -92,7 +92,7 @@ public class AssertionClaimsTest {
     @Test
     public void addEmailWithEqualsAndIALShouldAddEmailClaimIfNotAlreadyPresent() {
         AssertionClaims assertionClaims = new AssertionClaims();
-        assertionClaims.email().eq("davide.bianchini@santander.co.uk").withIAL(IAL.ONE);
+        assertionClaims.email().eq("jane.doe@op-example.com").withIAL(IAL.ONE);
 
         assertThat("Assertion not added", assertionClaims.getClaims().size(), is(1));
         assertThat("Wrong assertion added", assertionClaims.getClaims().get(0), is(emailAssertionClaimEqWithIAL));
@@ -101,7 +101,7 @@ public class AssertionClaimsTest {
     @Test
     public void addEmailWithEqualsAndEssentialShouldAddEmailClaimIfNotAlreadyPresent() {
         AssertionClaims assertionClaims = new AssertionClaims();
-        assertionClaims.email().eq("davide.bianchini@santander.co.uk").withEssential(true);
+        assertionClaims.email().eq("jane.doe@op-example.com").withEssential(true);
 
         assertThat("Assertion not added", assertionClaims.getClaims().size(), is(1));
         assertThat("Wrong assertion added", assertionClaims.getClaims().get(0), is(emailAssertionClaimEqWithEssential));
@@ -128,7 +128,7 @@ public class AssertionClaimsTest {
     @Test
     public void addDateWithEqualsShouldAddDateClaimWhenEmailClaimIsAlreadyPresentIfNotAlreadyPresent() {
         AssertionClaims assertionClaims = new AssertionClaims();
-        assertionClaims.email().eq("davide.bianchini@santander.co.uk");
+        assertionClaims.email().eq("jane.doe@op-example.com");
         assertionClaims.birthdate().eq(now);
 
         assertThat("Assertion not added", assertionClaims.getClaims().size(), is(2));

@@ -16,7 +16,7 @@ The first step is to create the client and set it up:
 
 ```java
 final verifiedIdClient = new VerifiedIdClientImpBuilder()
-        .withWellKnownURI("https://op-iamid-verifiedid-pro.e4ff.pro-eu-west-1.openshiftapps.com/.well-known/openid-configuration")
+        .withWellKnownURI("https://live.iamid.io/.well-known/openid-configuration")
         .withPrivateJWKFromFile("./secrets/privateKey.json")
         .withClientId("12345678-aaaa-bbbb-cccc-1234567890ab")
         .build(); // creating the client
@@ -71,7 +71,7 @@ public class InitiateAuthorizeResponse {
 
 The _redirectionUri_ can be used to redirect users to the consent journey:
 ```
-https://op-iamid-verifiedid-pro.e4ff.pro-eu-west-1.openshiftapps.com/web/login?request_uri=urn:op.iamid.io:JDAQ9YwMSLcCbiUz0Wq0HGjpu-wr4HngFDCv8tTkQa-
+https://live.iamid.io/web/login?request_uri=urn:op.iamid.io:JDAQ9YwMSLcCbiUz0Wq0HGjpu-wr4HngFDCv8tTkQa-
 ```
 The consent process (happening in a browser, out of scope for this SDK) finishes with an authorization code:
 ```

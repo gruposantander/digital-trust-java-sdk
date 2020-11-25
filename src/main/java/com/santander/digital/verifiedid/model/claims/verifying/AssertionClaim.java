@@ -38,7 +38,7 @@ public class AssertionClaim<T> {
         try {
             jsonAssertionClaim.put("essential", this.essential);
             jsonAssertionClaim.put("purpose", this.purpose);
-            jsonAssertionClaim.put("ial", this.ial);
+            jsonAssertionClaim.put("ial", this.ial!=null ? this.ial.getValue() : null);
         } catch (JSONException e) {
             throw new DigitalIdGenericException(e);
         }

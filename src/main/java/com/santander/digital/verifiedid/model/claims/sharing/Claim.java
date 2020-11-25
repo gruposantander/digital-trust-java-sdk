@@ -49,7 +49,7 @@ public class Claim {
         try {
             json.put("essential", essential);
             json.put("purpose", purpose);
-            json.put("ial", ial);
+            json.put("ial", ial!=null ? ial.getValue() : null);
         } catch (JSONException e) {
             throw new DigitalIdGenericException(e);
         }

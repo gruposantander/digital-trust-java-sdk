@@ -8,25 +8,25 @@
       "assertion_claims": {
         "given_name": {
           "assertion": {
-            "$eq": "John"
+            "eq": "John"
           },
           "purpose": "This is why RP is verifying your name"
         },
         "email": {
           "assertion": {
-            "$eq": "jane.doe@op-example.com"
+            "eq": "jane.doe@op-example.com"
           },
           "purpose": "This is why RP is verifying your email"
         },
         "birthdate": {
           "assertion": {
-            "$eq": "1970-01-01"
+            "eq": "1970-01-01"
           },
           "purpose": "This is why RP is verifying your DOB"
         },
         "age": {
           "assertion": {
-            "$gt": 18
+            "gt": 18
           },
           "purpose": "age purpose"
         },
@@ -34,11 +34,13 @@
           "purpose": "address assertion purpose",
           "essential": true,
           "assertion": {
-            "postal_code": {
-              "$eq": "MK1 1AA"
-            },
-            "country": {
-              "$eq": "United Kingdom"
+            "props" : {
+              "postal_code": {
+                "eq": "MK1 1AA"
+              },
+              "country": {
+                "eq": "United Kingdom"
+              }
             }
           }
         },
@@ -46,11 +48,13 @@
           "purpose": "total balance assertion purpose",
           "essential": true,
           "assertion": {
-            "amount": {
-              "$gt": 100.01
-            },
-            "currency": {
-              "$eq": "GBP"
+            "props" : {
+              "amount": {
+                "gt": 100.01
+              },
+              "currency": {
+                "eq": "GBP"
+              }
             }
           }
         }

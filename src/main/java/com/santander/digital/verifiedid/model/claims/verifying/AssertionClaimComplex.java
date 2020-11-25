@@ -22,10 +22,12 @@ public class AssertionClaimComplex extends AssertionClaim {
     public JSONObject toJSON () {
         final JSONObject json = super.toJSON();
         final JSONObject assertion = new JSONObject();
+        final JSONObject props = new JSONObject();
         try {
             for (Property property: this.properties) {
-                assertion.put(property.getPropertyName(), property.toJSON());
+                props.put(property.getPropertyName(), property.toJSON());
             }
+            assertion.put("props", props);
             json.put("assertion", assertion);
         } catch (JSONException e) {
             throw new DigitalIdGenericException(e);

@@ -12,7 +12,7 @@ public class CommonUtils {
         final Integer year = calendar.get(Calendar.YEAR);
         final Integer month = calendar.get(Calendar.MONTH) + 1;
         final Integer day = calendar.get(Calendar.DAY_OF_MONTH);
-        return String.format("%04d-%02d-%02d", year, month, day);
+        return String.format("%02d/%02d/%04d", day, month, year);
     }
 
     public static <T> T requireNonNull(T obj, String message) {

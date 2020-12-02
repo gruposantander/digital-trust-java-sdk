@@ -14,6 +14,6 @@ public class CommonUtilsTest {
     @Test
     public void isoDateShouldParseCorrectly () {
         String iso = CommonUtils.isoDate(Date.from(Instant.ofEpochSecond(1581961971)));
-        assertThat("wrong parsing", iso, is("2020-02-17"));
+        assertThat("wrong parsing", iso, is("17/02/2020"));
     }
 }

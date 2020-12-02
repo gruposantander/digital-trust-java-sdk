@@ -93,24 +93,24 @@
   },
   "assertion_claims_query_language_supported": {
     "string": [
-      "$eq"
+      "eq"
     ],
     "phone_number": [
-      "$eq"
+      "eq"
     ],
     "date": [
-      "$eq",
-      "$gt",
-      "$lt",
-      "$gte",
-      "$lte"
+      "eq",
+      "gt",
+      "lt",
+      "gte",
+      "lte"
     ],
     "decimal": [
-      "$eq",
-      "$gt",
-      "$lt",
-      "$gte",
-      "$lte"
+      "eq",
+      "gt",
+      "lt",
+      "gte",
+      "lte"
     ],
     "object": []
   }

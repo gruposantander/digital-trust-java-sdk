@@ -19,7 +19,7 @@
         },
         "birthdate": {
           "assertion": {
-            "eq": "1970-01-01"
+            "eq": "01/01/1970"
           },
           "purpose": "This is why RP is verifying your DOB"
         },

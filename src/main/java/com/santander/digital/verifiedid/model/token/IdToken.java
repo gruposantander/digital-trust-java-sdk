@@ -44,7 +44,7 @@ public class IdToken {
 
     @JsonProperty("birthdate")
     @JsonFormat
-            (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+            (shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private Date birthDate;
 
     @JsonProperty("gender")
@@ -76,12 +76,12 @@ public class IdToken {
 
     @JsonProperty("company_start_date")
     @JsonFormat
-            (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+            (shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private Date companyStartDate;
 
     @JsonProperty("company_end_date")
     @JsonFormat
-            (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+            (shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private Date companyEndDate;
 
     @JsonProperty("company_type")

@@ -17,7 +17,7 @@ public class AssertionClaimSimpleTest {
         assertThat(
                 "wrong string transformation",
                 assertionClaimSimple.prepareOperand(Date.from(Instant.EPOCH)),
-                is("1970-01-01")
+                is("01/01/1970")
         );
 
     }

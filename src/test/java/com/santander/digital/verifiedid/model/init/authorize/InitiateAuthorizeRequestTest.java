@@ -84,4 +84,26 @@ public class InitiateAuthorizeRequestTest {
         final JSONObject jsonObject = initiateAuthorizeRequest.toJSON();
         assertThat("Wrong json structure", jsonObject.toString(), CoreMatchers.is(TestConstants.INITIATE_AUTHORIZE_REQUEST_BASIC_WITHOUT_REDIRECT_URI.toString()));
     }
+
+    @Test
+    public void toJSONProducesACorrectOutputWhenClaimsIsNotPresent() {
+        final InitiateAuthorizeRequest initiateAuthorizeRequest = InitiateAuthorizeRequest.builder()
+                .state("state-123")
+                .nonce("nonce-11111111-1111-1111-1111-111111111111")
+                .assertionClaims(assertionClaims)
+                .build();
+        final JSONObject jsonObject = initiateAuthorizeRequest.toJSON();
+        assertThat("Wrong json structure", jsonObject.toString(), CoreMatchers.is(TestConstants.INITIATE_AUTHORIZE_REQUEST_BASIC_WITHOUT_CLAIMS.toString()));
+    }
+
+    @Test
+    public void toJSONProducesACorrectOutputWhenAssertionClaimsIsNotPresent() {
+        final InitiateAuthorizeRequest initiateAuthorizeRequest = InitiateAuthorizeRequest.builder()
+                .state("state-123")
+                .nonce("nonce-11111111-1111-1111-1111-111111111111")
+                .claims(claims)
+                .build();
+        final JSONObject jsonObject = initiateAuthorizeRequest.toJSON();
+        assertThat("Wrong json structure", jsonObject.toString(), CoreMatchers.is(TestConstants.INITIATE_AUTHORIZE_REQUEST_BASIC_WITHOUT_ASSERTION_CLAIMS.toString()));
+    }
 }

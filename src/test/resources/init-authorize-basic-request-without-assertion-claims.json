@@ -1,0 +1,12 @@
+{
+  "state": "state-123",
+  "nonce": "nonce-11111111-1111-1111-1111-111111111111",
+  "claims": {
+    "id_token": {
+      "given_name": {
+        "purpose": "Given name purpose",
+        "essential": true
+      }
+    }
+  }
+}

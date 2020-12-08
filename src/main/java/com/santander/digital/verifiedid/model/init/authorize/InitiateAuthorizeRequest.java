@@ -51,10 +51,14 @@ public class InitiateAuthorizeRequest {
         final JSONObject tokenClaims = new JSONObject();
         addIdentificationPurpose(tokenClaims);
         final JSONObject idToken = new JSONObject();
-        for (Claim claim : this.claims.getClaims()) {
-            idToken.put(claim.getClaimName(), claim.toJSON());
+        if (Objects.nonNull(this.claims)) {
+            for (Claim claim : this.claims.getClaims()) {
+                idToken.put(claim.getClaimName(), claim.toJSON());
+            }
         }
-        idToken.put("assertion_claims", this.assertionClaims.toJSON());
+        if (Objects.nonNull(this.assertionClaims)) {
+            idToken.put("assertion_claims", this.assertionClaims.toJSON());
+        }
         tokenClaims.put("id_token", idToken);
         json.put("claims", tokenClaims);
     }
